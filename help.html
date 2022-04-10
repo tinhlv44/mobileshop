@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOBILE Shop</title>
+    <script src="./set/js/main.js"></script>    
+    <link rel="stylesheet" href="./set/css/base.css">
+    <link rel="stylesheet" href="./set/css/main.css">
+    <link rel="stylesheet" href="./set/icon-web/css/all.min.css">   
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="web">
+        <header class="header_help">
+            <div class="help_top">
+                <div class="help_logo">
+                    <div class="help_imglogo">
+                        <a href="index.html" class="infor_list-link" >
+                            <img class="infor_img" src=".\set\img\logo.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="help_help">
+                    <span class="help_helpct">Hỗ trợ</span>
+                </div>
+            </div>
+            <div class="help_bottom">
+                <div class="help_search">                    
+                    <div class="help_searchhead">
+                        Xin chào. MOBILE shop có thể giúp gì cho bạn.
+                    </div>
+                    <input type="text" class="help_searchinput" placeholder="Đặt câu hỏi hoặc nhập từ khóa">
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <nav class="category">
+                <h3 class="category_heading">
+                    <i class="category_icon fa-solid fa-list"></i>
+                    Danh mục
+                </h3>
+                <ul class="category_list">
+                    <li class="category_item">
+                        <a href="" class="category_linkitem">Tài khoản và mục khác</a>
+                    </li>
+                    <li class="category_item">
+                        <a href="" class="category_linkitem">Đơn hàng và thanh toán</a>
+                    </li>
+                    <li class="category_item">
+                        <a href="" class="category_linkitem">Trả hàng và hoàn tiền</a>
+                    </li>
+                    <li class="category_item">
+                        <a href="" class="category_linkitem">Vận chuyển</a>
+                    </li>
+                    <li class="category_item">
+                        <a href="" class="category_linkitem">MOBILE shop mail</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="posts">
+                <h3 class="posts_heading">Bài viết</h3>
+                <ul class="posts_list">
+                    <li class="posts_item">
+                        <a href="" class="posts_link">[Thành viên mới] Cách đặt hàng trên MOBILE shop</a>
+                    </li>
+                    <li class="posts_item">
+                        <a href="" class="posts_link">Những cần lưu ý trước khi đặt hàng</a>
+                    </li>
+                    <li class="posts_item">
+                        <a href="" class="posts_link">Cách lấy lại tài khoản khi quên mật khẩu</a>
+                    </li>
+                    <li class="posts_item">
+                        <a href="" class="posts_link">Chi phí vận chuyển</a>
+                    </li>
+                    <li class="posts_item">
+                        <a href="" class="posts_link">Chính sách trả hàng và hoàn tiền</a>
+                    </li>
+                    <li class="posts_item hide">
+                        <a href="" class="posts_link">Chính sách ưu đãi khủng</a>
+                    </li>
+                    <li class="posts_item hide">
+                        <a href="" class="posts_link">Mua liền tay rinh quà hot</a>
+                    </li>
+                    <li class="posts_item hide">
+                        <a href="" class="posts_link">Lưu ý bảo vệ tài khoản</a>
+                    </li>
+                </ul>                
+                <button class="btn posts_btn" id="seemore" onclick="seemore()">Xem thêm</button>
+                <button class="btn posts_btn hide" onclick="hide()">Ẩn bớt</button>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer_top">
+                <div class="footer_infor">
+                    <ul class="footer_infor_list">
+                        <li class="footer_infor_item">
+                            <a href="" class="footer_infor_link">Câu hỏi thường gặp khi mua hàng</a>
+                        </li>
+                        <li class="footer_infor_item">
+                            <a href="" class="footer_infor_link">Tra cứu thông tin bảo hành</a>
+                        </li>
+                        <li class="footer_infor_item">
+                            <a href="" class="footer_infor_link">Tin tuyển dụng</a>
+                        </li>
+                        <li class="footer_infor_item">
+                            <a href="" class="footer_infor_link">Chính sách khuyến mãi</a>
+                        </li>
+                        <li class="footer_infor_item">
+                            <a href="" class="footer_infor_link">Chính sách đổi trả</a>
+                        </li>
+                        <li class="footer_infor_item">
+                            <a href="" class="footer_infor_link">Chính sách bảo mật</a>
+                        </li>
+                        <li class="footer_infor_item">
+                            <a href="" class="footer_infor_link">Kiểm tra hóa đơn điện tử</a>
+                        </li>
+                        <li class="footer_infor_item">
+                            <a href="" class="footer_infor_link">Chính sách trả góp</a>
+                        </li>
+                        <li class="footer_infor_item">
+                            <a href="" class="footer_infor_link">Quy chế hoạt động</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_left">
+                    <div class="footer_call">
+                        <ul class="footer_call_list">
+                            <li class="footer_call_item">
+                                <h3 class="call_heading">Tư vấn mua hàng (24/7)</h3>
+                                <p class="call_ct"><b class="call_bct">0988 0909</b> (Miễn phí)</p>
+                            </li>
+                            <li class="footer_call_item">
+                                <h3 class="call_heading">Khiếu nại (8h-22h)</h3>
+                                <p class="call_ct"><b class="call_bct">0988 0908</b> (Miễn phí)</p>
+                            </li>
+                            <li class="footer_call_item">
+                                <h3 class="call_heading">Hỗ trợ kĩ thuật (24/7)</h3>
+                                <p class="call_ct"><b class="call_bct">0988 0907</b> (Miễn phí)</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_pay">
+                        <h3 class="pay_heading">Hỗ trợ thanh toán:</h3>   
+                        <div class="pay_icon">
+                            <i class="icon_visa fa-brands fa-cc-visa"></i>
+                            <i class="icon_paypal fa-brands fa-cc-paypal"></i>
+                            <i class="icon_apple_pay fa-brands fa-cc-apple-pay"></i>
+                            <i class="icon_mastercard fa-brands fa-cc-mastercard"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="footer_bt_ct">Công ty trách nhiệm hữu hạn một thành viên Lê Văn Tính - Trường Đại học Thủ Dầu Một.<br>Email: 2124801030225@student.tdmu.edu.vn. Chịu trách nhiệm nội dung: Ông Lê Văn Tính</div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

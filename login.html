@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <script src="./set/js/main.js"></script>   
+    <link rel="stylesheet" href="./set/css/base.css">
+    <link rel="stylesheet" href="./set/css/main.css">
+    <link rel="stylesheet" href="./set/icon-web/css/all.min.css">   
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
+</head>
+<body>    
+    <!-- relo -->
+    <div class="relo">
+        <div class="relo_bg"></div>
+        <div class="relo_body">
+            <form action="#" class="relo_form" novalidate>                 
+                <div class="relo_container">
+                    <div class="relo_head">
+                        <h3 class="relo_heading">Đăng nhập</h3>
+                        <a href="regis.html" class="relo_relo">Đăng ký</a>
+                    </div>
+                    <div class="relo_form">
+                        <div class="relo_err">
+                            <p class="relo_errct">
+                                Số điện thoại của bạn không đúng định dạng!
+                            </p>
+                        </div>
+                        <div class="relo_err">
+                            <p class="relo_errct">
+                                Bạn chưa nhập số điện thoại!
+                            </p>
+                        </div>
+                        <div class="relo_gr">
+                            <input type="text" id="relo_input_user" class="relo_input" placeholder="Số điện thoại" >
+                        </div>
+                        <div class="relo_err">
+                            <p class="relo_errct">
+                                Mật khẩu phải có ít nhất 8 kí tự
+                            </p>
+                        </div>
+                        <div class="relo_err">
+                            <p class="relo_errct">
+                                Bạn chưa nhập mật khẩu!
+                            </p>
+                        </div>
+                        <div class="relo_gr">
+                            <input type="password" id="relo_input_pass" class="relo_input" placeholder="Mật khẩu" >
+                        </div>
+                        <div class="relo_hidden">
+                            <input type="checkbox" class="relo_inputcheck" onclick="hiddenpass()">
+                            <div class="relo_hiddenct">Hiện mật khẩu</div>
+                        </div>
+                    </div>
+                    <div class="relo_formaside">
+                        <div class="relo_help">
+                            <a href="" class="relo_linkhelp">Quên mật khẩu</a>
+                            <a href="" class="relo_linkhelp help">Cần trợ giúp?</a>
+                        </div>
+                    </div>
+                    <div class="relo_btn">
+                        <button type="button" class="relo_btnl btn" onclick="window.history.go(-1)">TRỞ LẠI</button>
+                        <button type="submit" class="relo_btnr btn btn_green on" onclick="checklogin()">ĐĂNG NHẬP</button>
+                    </div>
+                </div>
+            </form>       
+            <div class="relo_social">
+                <a href="" class="btn icon_fb btn_wicon"  onclick="not_login()">
+                    <i class="btn_icon fab fa-facebook-square"></i>
+                    <span class="title_content">Đăng nhập với Facebook</span>
+                </a>
+                <a href="" class="btn icon_gg btn_wicon"  onclick="not_login()">
+                    <i class="btn_icon fab fa-google"></i>
+                    <span class="title_content">Đăng nhập với Google</span>
+                </a>
+            </div>            
+        </div>
+    </div>
+</body>
+</html>

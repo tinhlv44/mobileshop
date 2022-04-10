@@ -1,0 +1,149 @@
+:root{
+    --main--color: #58e02f;
+    --border--color: #dbdbdb;
+    --header--color: #0e180d;
+    --shadow--color: rgb(0 0 0 / 18%);
+    --bgmenu--color: #FCF7F7;
+    --w--color: white;
+
+    --grid--height: 39px;
+    --hnav--height: 38px;
+    --height--height: var(--grid--height) + var(--hnav--height);
+
+}
+*{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+.grid{
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+/* Animation */
+@keyframes fade{
+    from{
+        opacity: 0;
+        transform: translateY(25%);
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes fading{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+/* relo */
+.relo{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+}
+.relo_bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(42, 247, 35, 0.3);
+}
+.relo_body{
+    margin: auto;
+    z-index: 1;
+}
+/* button style */
+.btn{
+    height: 36px;
+    background-color: rgb(230, 230, 230);
+    text-decoration: none;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    font-size: 16px;
+    padding: 0;
+    cursor: pointer;
+    margin: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn:hover{
+    background-color: var(--border--color);
+}
+.btn.btn_green{
+    background-color: var(--main--color);
+}
+.btn.btn_green:hover{
+    background-color: var(--border--color);
+    color: var(--main--color);
+}
+/* coin */
+.coinpre{
+	color: red;
+	font-weight: 500;
+}
+.coinpast{
+	text-decoration: line-through;
+	font-size: 14px;
+}
+/* checkbox */
+.checkbox_box{
+	border: 1px solid black;
+	border-radius: 4px;
+	height: 28px;
+    width: 28px;
+	overflow: hidden;
+}
+.checkboxic{
+	font-size: 24px;
+    color: var(--w--color);
+    background-color: var(--main--color);
+    width: 100%;
+    text-align: center;
+    height: 100%;
+}
+/* color */
+.cblack{
+    background-color: #1d1d1d;
+}
+.cpink{
+    background-color: #fda3cd;
+}
+.cblue{
+    background-color: blue;
+}
+.cgreen{
+    background-color: #186867;
+}
+.cwhite{
+    background-color: white;
+}
+.cgray{
+    background-color: gray;
+}
+.cyellow{
+    background-color: yellow;
+}
+.cpurple{
+    background-color: purple;
+}
+.cred{
+    background-color: rgb(226, 17, 17);
+}
+/* forcus */
+.forcus{
+    color: red;
+    position: absolute;
+    left: 80px;
+}
