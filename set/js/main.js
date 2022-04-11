@@ -204,7 +204,9 @@ function not_buy(){
     alert("Bạn đã mua hàng thành công!\nHàng lúc nào về thì chúng tôi không biết!");
     return true;
 }
-// product cart
-
+// creat cart item
+function creat_cart(){
+    
+}
 
 

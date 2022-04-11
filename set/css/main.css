@@ -951,6 +951,7 @@
 	align-items: center;
 	height: 100%;
 	flex-direction: column;
+	display: none;
 }
 .pcart_hollowct{
 	font-size: 26px;	
@@ -1157,7 +1158,7 @@
 	margin: 10px 0;
 }
 .buy_in{
-	width: 72%;
+	width: 86%;
 	height: 40px;
 	border: 1px solid var(--border--color);
 	outline-color: var(--main--color);
