@@ -20,6 +20,9 @@ html{
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
+.web{
+    min-width: 1300px;
+}
 .grid{
     width: 1200px;
     max-width: 100%;
