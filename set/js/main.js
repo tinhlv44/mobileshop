@@ -185,12 +185,6 @@ function change(n, path){
     y[0].src = "./set/img/product/" + path;
 }
 // noti
-function not_product(){
-    alert("Chưa có hàng bạn ơi!");
-}
-function not_vor(){
-    alert("Hiện chưa có thông tin khuyến mãi!");
-}
 function not_buy(){
     var x = document.getElementsByClassName("buy_in");
     var y = document.getElementsByClassName("notibuy");
@@ -204,9 +198,19 @@ function not_buy(){
     alert("Bạn đã mua hàng thành công!\nHàng lúc nào về thì chúng tôi không biết!");
     return true;
 }
-// creat cart item
-function creat_cart(){
-    
+// out of stock
+function out_of_stock(n){
+    document.getElementsByClassName("out_stock")[n].style.display = "flex";
 }
-
-
+function close_oos(n){
+    document.getElementsByClassName("out_stock")[n].style.display = "none";
+}
+window.onclick = function(event){
+    var modal = document.getElementsByClassName("out_stock");
+    if (event.target == modal[0]) {
+        modal[0].style.display = "none";
+    }
+    if (event.target == modal[1]) {
+        modal[1].style.display = "none";
+    }
+}
