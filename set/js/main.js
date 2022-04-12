@@ -103,12 +103,12 @@ function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 function showSlides(n) {
-    if (n>=1 && n<=6){        
+    let slides = document.getElementsByClassName("myslide");
+    let slidelink = document.getElementsByClassName("slide_link");    
+    let dots = document.getElementsByClassName("demo");
+    let index = document.getElementsByClassName("slide_idd");
+    if (n>=1 && n<=slides.length){        
         let i;
-        let slides = document.getElementsByClassName("myslide");
-        let slidelink = document.getElementsByClassName("slide_link");    
-        let dots = document.getElementsByClassName("demo");
-        let index = document.getElementsByClassName("slide_idd");
         if (n > slides.length) {slideIndex = n = 1}
         if (n < 1) {slideIndex = n = slides.length}
         for (i = 0; i < slides.length; i++) {

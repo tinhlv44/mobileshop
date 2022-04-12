@@ -730,6 +730,7 @@
     margin: 12px;
     padding: 16px 0;
     border-radius: 40px;
+	min-height: 414px;
 }
 .myslide{
 	display: none;
