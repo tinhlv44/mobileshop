@@ -16,6 +16,13 @@
     margin: 0;
     padding: 0;
 }
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
 html{
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
@@ -150,4 +157,45 @@ html{
     color: red;
     position: absolute;
     left: 36px;
+}
+
+/* modal box */
+.bg_modal{
+	z-index: 10;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;	
+	background-color: rgba(0, 0, 0, 0.349);
+	display: none;
+	animation: fade ease .3s;
+}
+.modal_box{
+	background-color: var(--w--color);
+	margin: auto;
+	width: 400px;
+	position: relative;
+}
+.modalbox_heading{
+	background-color: var(--main--color);
+	color: var(--w--color);
+	text-align: center;
+	padding: 8px 0;
+	font-size: 24px;
+}
+.modalbox_ct{
+	padding: 32px;	
+    line-height: 24px;
+}
+.modalbox_close{
+	position: absolute;
+	right: 12px;
+	font-size: 36px;
+	font-weight: bold;
+    cursor: pointer;
+}
+.modalbox_close:hover{
+	color: red;
 }

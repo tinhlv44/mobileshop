@@ -30,7 +30,7 @@ function checklogin(){
         mk.focus();
         return false;
     }
-    alert("Hiện tại chức năng đăng nhập đang bảo trì.\nVui lòng đăng nhập sau!");
+    presen_modal("Hiện tại chức năng đăng nhập đang bảo trì.<br>Vui lòng đăng ký sau!");
     return true;
 }
 function checkregis(){
@@ -76,12 +76,25 @@ function checkregis(){
         err_relo[5].style.display = "block";
         nmk.focus();
         return false;
-    }
-    alert("Hiện tại chức năng đăng ký đang bảo trì.\nVui lòng đăng ký sau!");
+    }    
+    presen_modal("Hiện tại chức năng đăng ký đang bảo trì.<br>Vui lòng đăng nhập sau!");
     return true;
 }
+function presen_modal(content){
+    var presen = document.getElementById("click_modal");
+    presen.style.display = "flex";
+    document.getElementsByClassName("modalbox_ct")[0].innerHTML = content;
+    document.getElementsByClassName("modalbox_close")[0].onclick = function(){
+        presen.style.display = "none";
+    }
+    window.onclick = function(event){
+        if (event.target == presen){
+            presen.style.display = "none";
+        }
+    }
+}
 function not_login(){
-    alert("Tín năng kết nối bằng mạng xã hội chưa khả dụng.\nVui lòng thử lại sau!");
+    presen_modal("Tín năng kết nối bằng mạng xã hội chưa khả dụng.<br>Vui lòng thử lại sau!");
 }
 function hiddenpass(){
     var x = document.getElementById("relo_input_pass");
@@ -172,7 +185,7 @@ function checkbox(n){
 function seletion(ct, n, path){
     var x = document.getElementsByClassName("proi_box"+ct);
     if ("proi_box"+ct == "proi_boxcolor"){
-        change(n, path);
+        change(path);
     }
     for (let i = 0; i<x.length; i++){
         x[i].style.border = "1px solid var(--border--color)";  
@@ -180,7 +193,7 @@ function seletion(ct, n, path){
     x[n].style.border = "2px solid red";
 }
 // change img
-function change(n, path){
+function change(path){
     var y = document.getElementsByClassName("proinfor_cimg");
     y[0].src = "./set/img/product/" + path;
 }
@@ -195,22 +208,28 @@ function not_buy(){
         }
     }
     y[0].style.display = "none";
-    alert("Bạn đã mua hàng thành công!\nHàng lúc nào về thì chúng tôi không biết!");
+    presen_modal("Bạn đã mua hàng thành công!<br>Hàng lúc nào về thì chúng tôi không biết!");
     return true;
 }
-// out of stock
-function out_of_stock(n){
-    document.getElementsByClassName("out_stock")[n].style.display = "flex";
+function out_of_stock(){
+    presen_modal("Chưa có hàng bạn ơi!");
 }
-function close_oos(n){
-    document.getElementsByClassName("out_stock")[n].style.display = "none";
+function not_promotion(){
+    presen_modal("Hiện chưa có thông tin khuyến mãi.");
 }
-window.onclick = function(event){
-    var modal = document.getElementsByClassName("out_stock");
-    if (event.target == modal[0]) {
-        modal[0].style.display = "none";
+function go_home(){
+    presen_modal("Vui lòng quay về trang chủ!");
+}
+// hide product
+function hide_mb(){
+    var mbstyle = document.getElementsByClassName("product_type");
+    for (let i=0; i<mbstyle.length; i++){
+        mbstyle[i].style.display = "none";
     }
-    if (event.target == modal[1]) {
-        modal[1].style.display = "none";
-    }
 }
+function presen_type(type){
+    hide_mb();
+    document.getElementById("type_" + type).style.display = "block";
+}
+
+// 
