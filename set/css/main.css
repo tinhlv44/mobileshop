@@ -249,7 +249,7 @@
 
 .main-menu>li{
 	position: relative;
-	margin: 0 12px;
+	padding: 0 12px;
 }
 .main-menu>li:hover{
 	background-color: var(--w--color);
@@ -481,12 +481,18 @@
 	color: var(--w--color);
 	background-color: #036ce4;
 }
-.title_content{
-	padding: 0 12px;
-}
 .icon_gg{
 	background-color: #d82424;
 	color: var(--w--color);
+}
+.icon_fb:hover{
+	color: #036ce4;
+}
+.icon_gg:hover{
+	color: #d82424;
+}
+.title_content{
+	padding: 0 12px;
 }
 .relo_help{
 	display: flex;
@@ -948,6 +954,9 @@
 }
 .cps_ic{
 	padding: 0 16px;
+}
+.cps_item>a:hover{
+	color: #036ce4;
 }
 /* pcart hollow*/
 .pcart{
