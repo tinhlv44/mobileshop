@@ -28,7 +28,7 @@ html{
     box-sizing: border-box;
 }
 .web{
-    min-width: 1300px;    
+    min-width: 1300px;   
 }
 .grid{
     width: 1200px;
@@ -177,6 +177,7 @@ html{
 	margin: auto;
 	width: 400px;
 	position: relative;
+    border: 1px solid var(--main--color);
 }
 .modalbox_heading{
 	background-color: var(--main--color);

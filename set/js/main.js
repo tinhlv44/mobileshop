@@ -1,20 +1,25 @@
+// check
+function check_tel(tel){
+    var vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
+    return vnf_regex.test(tel.value);
+}
+
 // relo
 function checklogin(){
-    var sdt = document.getElementById("relo_input_user");
-    var vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
+    var tel = document.getElementById("relo_input_user");
     var err_relo = document.getElementsByClassName("relo_err");
     for (let i = 0; i < err_relo.length; i++){
         err_relo[i].style.display = "none";
     }
-    if (sdt.value != ""){                
-        if (vnf_regex.test(sdt.value) == false){
+    if (tel.value != ""){                
+        if (!check_tel(tel)){
             err_relo[0].style.display = "block";
-            sdt.focus();
+            tel.focus();
             return false;
         } 
     }else{
         err_relo[1].style.display = "block";
-        sdt.focus();
+        tel.focus();
         return false;
     }
     var mk = document.getElementById("relo_input_pass");
@@ -34,21 +39,20 @@ function checklogin(){
     return true;
 }
 function checkregis(){
-    var sdt = document.getElementById("relo_input_user");
-    var vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
+    var tel = document.getElementById("relo_input_user");
     var err_relo = document.getElementsByClassName("relo_err");
     for (let i = 0; i < err_relo.length; i++){
         err_relo[i].style.display = "none";
     }
-    if (sdt.value != ""){                
-        if (vnf_regex.test(sdt.value) == false){
+    if (tel.value != ""){                
+        if (!check_tel(tel)){
             err_relo[0].style.display = "block";
-            sdt.focus();
+            tel.focus();
             return false;
         } 
     }else{
         err_relo[1].style.display = "block";
-        sdt.focus();
+        tel.focus();
         return false;
     }
     var mk = document.getElementById("relo_input_pass");
@@ -83,6 +87,12 @@ function checkregis(){
 function presen_modal(content){
     var presen = document.getElementById("click_modal");
     presen.style.display = "flex";
+    presen.innerHTML = "\
+        <div class='modal_box'>\
+            <span class='modalbox_close'>&times;</span>\
+            <h3 class='modalbox_heading'>Thông báo</h3>\
+            <p class='modalbox_ct'></p>\
+        </div>"
     document.getElementsByClassName("modalbox_ct")[0].innerHTML = content;
     document.getElementsByClassName("modalbox_close")[0].onclick = function(){
         presen.style.display = "none";
@@ -204,6 +214,7 @@ function not_buy(){
     for (var i=0; i<x.length; i++){
         if (x[i].value==""){            
             y[0].style.display = "block";
+            x[i].focus();
             return false;
         }
     }
@@ -232,4 +243,44 @@ function presen_type(type){
     document.getElementById("type_" + type).style.display = "block";
 }
 
-// 
+// buy
+function buying_stock(){
+    var presen = document.getElementById("click_modal");
+    presen.style.display  = "flex";
+    presen.innerHTML = "\
+            <div class='buying'>\
+                <ul class='buy_list'>\
+                    <li class='buy_item'>\
+                        <h3 class='buy_heading'>Thông tin khách hàng</h3>\
+                    </li>\
+                    <li class='buy_item notibuy'>\
+                        <p class='buy_noti'>Bạn vui lòng điền đầy đử thông tin và chính xác để nhận hàng.</p>\
+                    </li>\
+                    <li class='buy_item'>\
+                        <p class='forcus'>*</p><input type='text' class='buy_in' placeholder='Họ và tên'>\
+                    </li>\
+                    <li class='buy_item'>\
+                        <p class='forcus'>*</p><input type='text' class='buy_in' placeholder='Số điện thoại'>\
+                    </li>\
+                    <li class='buy_item'>\
+                        <input type='text' class='buy_in' placeholder='Email'>\
+                    </li>\
+                    <li class='buy_item'>\
+                        <p class='forcus'>*</p><input type='text' class='buy_in' placeholder='Địa chỉ nhận hàng (Vui lòng ghi rõ ràng)'>\
+                    </li>\
+                    <li class='buy_item'>\
+                        <input type='text' class='buy_in' placeholder='Yêu cầu khác'>\
+                    </li>\
+                    <li class='buy_item'><button class='btn btn_green buy_btn' onclick='not_buy()'>Mua hàng</button></li>\
+                </ul>\
+                <span class='modalbox_close close_buy'>&times;</span>\
+            </div>";
+    document.getElementsByClassName("modalbox_close")[0].onclick = function(){
+        presen.style.display = "none";
+    }
+    window.onclick = function(event){
+        if (event.target == presen){
+            presen.style.display = "none";
+        }
+    }
+}

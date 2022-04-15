@@ -975,11 +975,13 @@
 	align-items: center;
 	height: 100%;
 	flex-direction: column;
-	display: none;
 }
 .pcart_hollowct{
 	font-size: 26px;	
 	margin: 16px 0;	
+}
+.pcart_rehome{
+	padding: 0 16px;
 }
 /* pcart full */
 .pcart_prot{
@@ -1170,17 +1172,26 @@
 }
 /* buy */
 .buying{
-	width: 50%;
+	width: 40%;
 	background-color: white;
 	text-align: center;
-	border-radius: 40px;
+	margin: auto;
+	position: relative;
+	border: 1px solid var(--main--color);
 }
 .buy_list{	
-	padding: 20px 0;	
+	margin-bottom: 20px;	
 }
 .buy_item{
 	position: relative;
 	margin: 10px 0;
+}
+.buy_item:first-of-type{
+	margin: 0;
+	padding: 20px 0;
+	color: white;
+	font-size: 24px;
+	background-color: var(--main--color);
 }
 .buy_in{
 	width: 86%;
@@ -1201,4 +1212,9 @@
 }
 .notibuy{
 	display: none;
+}
+.close_buy{
+	position: absolute;
+	top: -4px;
+	right: 8px;
 }
