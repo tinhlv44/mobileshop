@@ -1,5 +1,6 @@
 :root{
-    --main--color: #58e02f;
+    --main--color: #39772C;
+
     --border--color: #dbdbdb;
     --header--color: #0e180d;
     --shadow--color: rgb(0 0 0 / 18%);
@@ -67,7 +68,9 @@ html{
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(42, 247, 35, 0.3);
+    /* background-color: rgba(42, 247, 35, 0.3); */
+    background-color: #deebddd0;
+    background-image: linear-gradient(315deg, #deebdd 0%, #bbdbbe 44%);
 }
 .relo_body{
     margin: auto;
