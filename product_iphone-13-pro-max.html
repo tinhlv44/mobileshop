@@ -39,7 +39,7 @@
                                 <h3 class="stop_h3">Top tìm kiếm</h3>
                                 <ul class="search_slist">
                                     <li class="search_sitem">
-                                        <a href="#" class="search_slink">Điện thoại xịn giá rẻ</a>
+                                        <a class="search_slink">Điện thoại xịn giá rẻ</a>
                                     </li>
                                     <li class="search_sitem">
                                         <a href="product_iphone-13-pro-max.html" class="search_slink">iPhone 13 Pro max</a>
@@ -48,10 +48,10 @@
                                         <a href="product_xiaomi-12-pro.html" class="search_slink">Xiaomi 12 Pro</a>
                                     </li>
                                     <li class="search_sitem">
-                                        <a href="#" class="search_slink">Điện thoại rẻ như cho</a>
+                                        <a class="search_slink">Điện thoại rẻ như cho</a>
                                     </li>
                                     <li class="search_sitem">
-                                        <a href="#" class="search_slink">Laptop xịn sò con bò</a>
+                                        <a class="search_slink">Laptop xịn sò con bò</a>
                                     </li>
                                 </ul>
                             </div>
@@ -62,7 +62,7 @@
                     </div>
                     <ul class="infor_list">
                         <li class="infor_list-item infor_notifyhover">
-                            <a href="#" class="infor_list-link">
+                            <a class="infor_list-link">
                                 <i class="infor_icons fa-solid fa-bell"></i>
                                 Thông báo
                             </a>
@@ -97,11 +97,25 @@
                             </a>
                         </li>
                         <li class="infor_list-item list_cart">
-                            <a href="cart.html" class="infor_list-link">
+                            <a class="infor_list-link">
                                 <i class="infor_icons fa-solid fa-cart-shopping"></i>
                                 Giỏ hàng
                             </a>
-                            <div class="cart_icon"></div>
+                            <div id="cart_icon"></div>
+                            <div class="pcart">
+                                <div class="pcart_hollow">
+                                    <i class="icon_sad fa-solid fa-face-frown"></i>
+                                    <div class="pcart_hollowct">Không có sản phẩm trong giỏ hàng</div>
+                                </div>
+                                <div class="pcart_prot" style="display:none;"> 
+                                    <ul class="pcart_list" id="cart">        
+                                    </ul>
+                                    <div class="pcart_btn">
+                                        <a onclick="buying_stock()" class="pcart_button btn btn_green">Đặt hàng</a>
+                                        <a onclick="clear_stock()" class="pcart_button btn pcart_clear">Xóa</a>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li class="infor_list-item borderleft">
                             <a href="regis.html" class="infor_list-link item-strong">
@@ -119,7 +133,7 @@
             <nav class="header_nav">
                 <ul class="main-menu">
                     <li>
-                        <a href="#">
+                        <a>
                             <i class="fa-solid fa-mobile"></i>
                             Điện thoại
                         </a>     
@@ -127,29 +141,29 @@
                             <div class="name">
                                 <h3>HÃNG SẢN XUẤT</h3>
                                 <ul class="sub_menu1">
-                                    <li><a href="#" onclick="go_home()">Apple (iPhone)</a></li>
-                                    <li><a href="#" onclick="go_home()">Samsung</a></li>
-                                    <li><a href="#" onclick="go_home()">OPPO</a></li>
-                                    <li><a href="#" onclick="go_home()">Xiaomi</a></li>
-                                    <li><a href="#" onclick="out_of_stock()">Vivo</a></li>
-                                    <li><a href="#" onclick="out_of_stock()">Tecno</a></li>
-                                    <li><a href="#" onclick="out_of_stock()">Nokia</a></li>
+                                    <li><a onclick="go_home()">Apple (iPhone)</a></li>
+                                    <li><a onclick="go_home()">Samsung</a></li>
+                                    <li><a onclick="go_home()">OPPO</a></li>
+                                    <li><a onclick="go_home()">Xiaomi</a></li>
+                                    <li><a onclick="go_home()">Realme</a></li>
+                                    <li><a onclick="out_of_stock()">Vivo</a></li>
+                                    <li><a onclick="out_of_stock()">Nokia</a></li>
                                 </ul>
                             </div>
                             <div class="coin">
                                 <h3>MỨC GIÁ</h3>
                                 <ul class="sub_menu1">
-                                    <li><a href="#">Dưới 2 triệu</a></li>
-                                    <li><a href="#">Từ 2 - 5 triệu</a></li>
-                                    <li><a href="#">Từ 5 - 10 triệu</a></li>
-                                    <li><a href="#">Từ 10 - 20 triệu</a></li>
-                                    <li><a href="#">Trên 20 triệu</a></li>
+                                    <li><a>Dưới 2 triệu</a></li>
+                                    <li><a>Từ 2 - 5 triệu</a></li>
+                                    <li><a>Từ 5 - 10 triệu</a></li>
+                                    <li><a>Từ 10 - 20 triệu</a></li>
+                                    <li><a>Trên 20 triệu</a></li>
                                 </ul>
                             </div>
                         </div>
                     </li>                    
                     <li>
-                        <a href="#">
+                        <a>
                             <i class="fa-solid fa-laptop"></i>
                             Laptop
                         </a>
@@ -158,92 +172,92 @@
                                 <div>                                
                                     <h3>HÃNG SẢN XUẤT</h3>
                                     <ul class="sub_menu1">
-                                        <li><a href="#" onclick="out_of_stock()">Apple (MacBook)</a></li>
-                                        <li><a href="#" onclick="out_of_stock()">Asus</a></li>
-                                        <li><a href="#" onclick="out_of_stock()">HP</a></li>
-                                        <li><a href="#" onclick="out_of_stock()">Acer</a></li>
-                                        <li><a href="#" onclick="out_of_stock()">MSI</a></li>
-                                        <li><a href="#" onclick="out_of_stock()">Lenovo</a></li>
-                                        <li><a href="#" onclick="out_of_stock()">Dell</a></li>
-                                        <li><a href="#" onclick="out_of_stock()">Microsoft (Surface)</a></li>
+                                        <li><a onclick="go_home()">Apple (MacBook)</a></li>
+                                        <li><a onclick="go_home()">Asus</a></li>
+                                        <li><a onclick="out_of_stock()">HP</a></li>
+                                        <li><a onclick="out_of_stock()">Acer</a></li>
+                                        <li><a onclick="out_of_stock()">MSI</a></li>
+                                        <li><a onclick="out_of_stock()">Lenovo</a></li>
+                                        <li><a onclick="out_of_stock()">Dell</a></li>
+                                        <li><a onclick="out_of_stock()">Microsoft (Surface)</a></li>
                                     </ul>
                                 </div>
                                 <div>                                
                                     <h3>PHẦN MỀM</h3>
                                     <ul class="sub_menu1">
-                                        <li><a href="#" onclick="out_of_stock()">Diệt virus</a></li>
-                                        <li><a href="#" onclick="out_of_stock()">Microsoft Office</a></li>
-                                        <li><a href="#" onclick="out_of_stock()">Windowns</a></li>
-                                        <li><a href="#" onclick="out_of_stock()">Phần mềm khác</a></li>
+                                        <li><a onclick="out_of_stock()">Diệt virus</a></li>
+                                        <li><a onclick="out_of_stock()">Microsoft Office</a></li>
+                                        <li><a onclick="out_of_stock()">Windowns</a></li>
+                                        <li><a onclick="out_of_stock()">Phần mềm khác</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="coin">
                                 <h3>MỨC GIÁ</h3>
                                 <ul class="sub_menu1">
-                                    <li><a href="#">Dưới 2 triệu</a></li>
-                                    <li><a href="#">Từ 2 - 5 triệu</a></li>
-                                    <li><a href="#">Từ 5 - 10 triệu</a></li>
-                                    <li><a href="#">Từ 10 - 20 triệu</a></li>
-                                    <li><a href="#">Trên 20 triệu</a></li>
+                                    <li><a>Dưới 2 triệu</a></li>
+                                    <li><a>Từ 2 - 5 triệu</a></li>
+                                    <li><a>Từ 5 - 10 triệu</a></li>
+                                    <li><a>Từ 10 - 20 triệu</a></li>
+                                    <li><a>Trên 20 triệu</a></li>
                                 </ul>
                             </div>
                         </div>
                     </li>   
                     <li>
-                        <a href="#">
+                        <a>
                             <i class="fa-solid fa-tablet"></i>
                             Tablet
                         </a>
                     </li>                 
                     <li>
-                        <a href="#">
+                        <a>
                             <i class="fa-solid fa-computer"></i>
                             PC - Linh kiện
                         </a>
                         <ul class="sub_menu2">
-                            <li onclick="out_of_stock()"><a href="#">PC</a></li>
-                            <li onclick="out_of_stock()"><a href="#">Linh kiện</a></li>
-                            <li onclick="out_of_stock()"><a href="#">Màn hình</a></li>
-                            <li onclick="out_of_stock()"><a href="#">Xây dựng PC</a></li>
+                            <li onclick="out_of_stock()"><a>PC</a></li>
+                            <li onclick="out_of_stock()"><a>Linh kiện</a></li>
+                            <li onclick="out_of_stock()"><a>Màn hình</a></li>
+                            <li onclick="out_of_stock()"><a>Xây dựng PC</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">
+                        <a>
                             <i class="fa-solid fa-headphones-simple"></i>
                             Phụ kiện
                         </a>
                         <ul class="sub_menu2">
-                            <li onclick="out_of_stock()"><a href="#">Bao da ốp lưng</a></li>
-                            <li onclick="out_of_stock()"><a href="#">Sạc dự phòng</a></li>
-                            <li onclick="out_of_stock()"><a href="#">Thẻ nhớ</a></li>
-                            <li onclick="out_of_stock()"><a href="#">Loa</a></li>
-                            <li onclick="out_of_stock()"><a href="#">Tai nghe</a></li>
-                            <li onclick="out_of_stock()"><a href="#">Bàn phím</a></li>
-                            <li onclick="out_of_stock()"><a href="#">Tai nghe</a></li>
-                            <li onclick="out_of_stock()"><a href="#">Phụ kiện khác</a></li>
+                            <li onclick="go_home()"><a>Tai nghe</a></li>
+                            <li onclick="go_home()"><a>Sạc dự phòng</a></li>
+                            <li onclick="out_of_stock()"><a>Bao da ốp lưng</a></li>
+                            <li onclick="out_of_stock()"><a>Thẻ nhớ</a></li>
+                            <li onclick="out_of_stock()"><a>Loa</a></li>
+                            <li onclick="out_of_stock()"><a>Bàn phím</a></li>
+                            <li onclick="out_of_stock()"><a>Tai nghe</a></li>
+                            <li onclick="out_of_stock()"><a>Phụ kiện khác</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">
+                        <a>
                             <i class="fa-solid fa-recycle"></i>
                             Máy cũ giá rẻ
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a>
                             <i class="fa-solid fa-sim-card"></i>
                             SIM & thẻ cào
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a>
                             <i class="fa-solid fa-receipt"></i>
                             Khuyến mãi
                         </a>
                         <ul class="sub_menu2">
-                            <li onclick="not_promotion()"><a href="#">Thông tin trao thưởng</a></li>
-                            <li onclick="not_promotion()"><a href="#">Tất cả khuyến mãi</a></li>
+                            <li onclick="not_promotion()"><a>Thông tin trao thưởng</a></li>
+                            <li onclick="not_promotion()"><a>Tất cả khuyến mãi</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -335,12 +349,9 @@
                     <div class="proi_pay">
                         <div class="proi_payctbox">
                             <p class="proi_payct"><b>iPhone 13 Pro Max</b> chính hãng VN/A  mới chính hãng đổi/ trả bảo hành, hàng xuất Viettel. Bộ sản phẩm chuẩn Fullbox gồm hộp chính hãng Việt Nam, thân máy, dây sạc USB C to Lightning, sách HDSD, que chọc sim. Sản phẩm đã kích hoạt/ chưa kích hoạt, bảo hành còn rất dài.<br>Số lượng có hạn, mời các bạn đặt hàng sớm tránh tình trạng hết hàng.</p>
-                        </div>
+                        </div>                        
                         <div class="proi_checkbox">
-                            <p class="proi_pcx">Còn hàng: </p>
-                            <div class="checkbox_box">                                    
-                                <i class="checkboxic fa-solid fa-check"></i>
-                            </div>
+                            <p class="proi_pcx">Hết hàng.</p>
                         </div>
                         <div class="proi_btn">
                             <a href="buy.html" class="btn btn_green proi_btnl">Mua hàng</a>
@@ -436,31 +447,31 @@
                 <div class="footer_infor">
                     <ul class="footer_infor_list">
                         <li class="footer_infor_item">
-                            <a href="#" class="footer_infor_link">Câu hỏi thường gặp khi mua hàng</a>
+                            <a class="footer_infor_link">Câu hỏi thường gặp khi mua hàng</a>
                         </li>
                         <li class="footer_infor_item">
-                            <a href="#" class="footer_infor_link">Tra cứu thông tin bảo hành</a>
+                            <a class="footer_infor_link">Tra cứu thông tin bảo hành</a>
                         </li>
                         <li class="footer_infor_item">
-                            <a href="#" class="footer_infor_link">Tin tuyển dụng</a>
+                            <a class="footer_infor_link">Tin tuyển dụng</a>
                         </li>
                         <li class="footer_infor_item">
-                            <a href="#" class="footer_infor_link">Chính sách khuyến mãi</a>
+                            <a class="footer_infor_link">Chính sách khuyến mãi</a>
                         </li>
                         <li class="footer_infor_item">
-                            <a href="#" class="footer_infor_link">Chính sách đổi trả</a>
+                            <a class="footer_infor_link">Chính sách đổi trả</a>
                         </li>
                         <li class="footer_infor_item">
-                            <a href="#" class="footer_infor_link">Chính sách bảo mật</a>
+                            <a class="footer_infor_link">Chính sách bảo mật</a>
                         </li>
                         <li class="footer_infor_item">
-                            <a href="#" class="footer_infor_link">Kiểm tra hóa đơn điện tử</a>
+                            <a class="footer_infor_link">Kiểm tra hóa đơn điện tử</a>
                         </li>
                         <li class="footer_infor_item">
-                            <a href="#" class="footer_infor_link">Chính sách trả góp</a>
+                            <a class="footer_infor_link">Chính sách trả góp</a>
                         </li>
                         <li class="footer_infor_item">
-                            <a href="#" class="footer_infor_link">Quy chế hoạt động</a>
+                            <a class="footer_infor_link">Quy chế hoạt động</a>
                         </li>
                     </ul>
                 </div>

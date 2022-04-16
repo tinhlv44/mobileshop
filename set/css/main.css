@@ -914,14 +914,14 @@
 .prot_coin{
 	display: flex;
 	justify-content: space-between;
-	padding: 8px 16px;
+	padding: 8px 24px;
 	margin-bottom: 8px;
     align-items: center;
 }
 .prot_btn{
 	display: flex;
 	justify-content: space-between;
-	margin: 0 32px 16px 16px;
+	margin: 0 18px 16px 16px;
 }
 .prot_pay{
 	font-weight: 500;
@@ -935,10 +935,11 @@
 	border-radius: 8px;
 	position: relative;
 	cursor: pointer;
+	width: 32px;
+	height: 32px;
 }
 .icon_cart_pro{
 	position: absolute;
-	padding: 6px;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -1000,8 +1001,8 @@
 	position: absolute;
 	display: block;
 	right: 0;
-	top: -3%;
-	height: 20px;
+	top: -16px;
+	height: 34px;
 	width: 126px;
 }
 .pcart:hover{
@@ -1016,6 +1017,7 @@
 	align-items: center;
 	height: 100%;
 	flex-direction: column;
+	height: 280px;
 }
 .pcart_hollowct{
 	font-size: 26px;	
@@ -1052,13 +1054,21 @@
     width: 28px;
 	overflow: hidden;
 }
+.not_check{
+	display: none;
+}
 .checkboxic{
 	font-size: 24px;
-    color: var(--w--color);
-    background-color: var(--main--color);
+    color: var(--main--color);
     width: 100%;
     text-align: center;
     height: 100%;
+}
+.fa-check::before{
+	display: none;
+}
+.not_check:checked ~ .fa-check::before{
+	display: block;	
 }
 .pcart_img{
 	height: 100%;
@@ -1159,6 +1169,8 @@
 }
 .proi_pcx{
 	margin-right: 16px;
+	font-weight: bold;
+	color: #CC0000;
 }
 .proi_btn{
 	position: absolute;
@@ -1252,6 +1264,7 @@
 }
 .notibuy{
 	display: none;
+	color: red;
 }
 .close_buy{
 	position: absolute;
@@ -1274,3 +1287,34 @@
 	text-decoration: line-through;
 	font-size: 14px;
 }
+
+
+/* 
+
+.checkbox:checked ~ .checkbo{
+	display: block;
+}
+.hehe{
+	position: relative;
+	cursor: pointer;
+}
+.hehee{
+	display: none;
+}
+.hehe::before{
+	
+	content: "";
+	width: 20px;
+	height: 20px;
+	border: 1px solid green;
+	display: block;
+}
+.fa-solid{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.hehee:checked ~ i{
+	display: block;
+} */

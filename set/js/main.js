@@ -35,7 +35,7 @@ function checklogin(){
         mk.focus();
         return false;
     }
-    presen_modal("Hiện tại chức năng đăng nhập đang bảo trì.<br>Vui lòng đăng ký sau!");
+    presen_modal("Hiện tại chức năng đăng nhập đang bảo trì.<br>Vui lòng đăng nhập sau!");
     return true;
 }
 function checkregis(){
@@ -81,7 +81,7 @@ function checkregis(){
         nmk.focus();
         return false;
     }    
-    presen_modal("Hiện tại chức năng đăng ký đang bảo trì.<br>Vui lòng đăng nhập sau!");
+    presen_modal("Hiện tại chức năng đăng ký đang bảo trì.<br>Vui lòng đăng ký sau!");
     return true;
 }
 function presen_modal(content){
@@ -181,16 +181,6 @@ function hide(){
         hide[i].style.display = "none";
     }
 }
-// check box
-function checkbox(n){
-    let x = document.getElementsByClassName("checkboxic");
-    if (x[n].style.display == "none"){
-        x[n].style.display = "block";
-    }
-    else{
-        x[n].style.display = "none";
-    }
-}
 // click seletion
 function seletion(ct, n, path){
     var x = document.getElementsByClassName("proi_box"+ct);
@@ -218,6 +208,12 @@ function not_buy(){
             return false;
         }
     }
+    if (!check_tel(x[1])){
+        y[0].innerHTML = "Số điện thoại không hợp lệ!"
+        y[0].style.display = "block";
+        x[1].focus();
+        return false;
+    } 
     y[0].style.display = "none";
     presen_modal("Bạn đã mua hàng thành công!<br>Hàng lúc nào về thì chúng tôi không biết!");
     return true;
@@ -285,16 +281,18 @@ function buying_stock(){
     }
 }
 function clear_stock(){
-    var check = document.getElementsByClassName("checkboxic");
-    for (let i=0; i<check.length; i++){
-        while (check[i].style.display == "block"){
-            document.getElementsByClassName("pcart_item")[i].style.display = "none";
-            document.getElementsByClassName("pcart_item")[i].class = '';
-            cnt -= 1;
+    var check = document.getElementsByClassName("not_check");
+    var pcart = document.getElementsByClassName("pcart_list")[0];
+    let i;
+    for (i=0; i<check.length; i++){
+        while (check[i].checked === true){
+            pcart.removeChild(document.getElementsByClassName("pcart_item")[i]);
         }
     }
-    if (cnt==0) {        
+    if (i==0) {        
         document.getElementsByClassName("pcart_hollow")[0].style.display = "flex";
+        document.getElementsByClassName("pcart_prot")[0].style.display = "none";
+        document.getElementById("cart_icon").style.display = "none";
     }
 }
 
@@ -307,9 +305,10 @@ function add_cart(n){
     var cart = document.getElementById("cart");
     cart.innerHTML = cart.innerHTML + "<li class='pcart_item'>\
                                             <div class='pcart_checkbox'>\
-                                                <div class='checkbox_box' onclick='checkbox("+cnt+")'>\
-                                                    <i class='checkboxic fa-solid fa-check' style='display:none'></i>\
-                                                </div>\
+                                                <label for='c"+cnt+"' class='checkbox_box'>\
+                                                    <input type='checkbox' class='not_check' id='c"+cnt+"'>\
+                                                    <i class='checkboxic fa-solid fa-check' ></i>\
+                                                </label>\
                                             </div>\
                                             <img src='' alt='' class='pcart_img' id='cimg'>\
                                             <div class='pcart_infor'>\
