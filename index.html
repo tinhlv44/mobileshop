@@ -97,11 +97,25 @@
                             </a>
                         </li>
                         <li class="infor_list-item list_cart">
-                            <a href="cart.html" class="infor_list-link">
+                            <a class="infor_list-link">
                                 <i class="infor_icons fa-solid fa-cart-shopping"></i>
                                 Giỏ hàng
                             </a>
-                            <div class="cart_icon"></div>
+                            <div id="cart_icon"></div>
+                            <div class="pcart">
+                                <div class="pcart_hollow">
+                                    <i class="icon_sad fa-solid fa-face-frown"></i>
+                                    <div class="pcart_hollowct">Không có sản phẩm trong giỏ hàng</div>
+                                </div>
+                                <div class="pcart_prot" style="display:none;"> 
+                                    <ul class="pcart_list" id="cart">        
+                                    </ul>
+                                    <div class="pcart_btn">
+                                        <a onclick="buying_stock()" class="pcart_button btn btn_green">Đặt hàng</a>
+                                        <a onclick="clear_stock()" class="pcart_button btn pcart_clear">Xóa</a>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li class="infor_list-item borderleft">
                             <a href="regis.html" class="infor_list-link item-strong">
@@ -331,7 +345,7 @@
                     <div class="prot">                                 
                         <div class="prot_frame">
                             <a href="product_iphone-13-pro-max.html" class="prot_aimg">                            
-                                <img class="prot_img" src="./set/img/product/iphone/iphone_13_pro_max/den.jpg" alt="">
+                                <img class="prot_img" src="set/img/product/iphone/iphone_13_pro_max/den.jpg" alt="">
                             </a>
                             <h3 class="prot_heading">iPhone 13 Pro Max</h3>
                             <div class="prot_coin">
@@ -339,8 +353,8 @@
                                 <div class="coinpast">30.990.000₫</div>                        
                             </div>
                             <div class="prot_btn">
-                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Mua ngay</button>
-                                <div class="prot_cart">
+                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
+                                <div class="prot_cart" onclick="add_cart(0)">
                                     <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
                                 </div>
                             </div>
@@ -356,7 +370,7 @@
                                 <div class="coinpast">17.990.000₫</div>                        
                             </div>
                             <div class="prot_btn">
-                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Mua ngay</button>
+                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
                                 <div class="prot_cart">
                                     <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
                                 </div>
@@ -373,7 +387,7 @@
                                 <div class="coinpast">11.990.000₫</div>                        
                             </div>
                             <div class="prot_btn">
-                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Mua ngay</button>
+                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
                                 <div class="prot_cart">
                                     <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
                                 </div>
@@ -390,7 +404,7 @@
                                 <div class="coinpast">9.990.000₫</div>                        
                             </div>
                             <div class="prot_btn">
-                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Mua ngay</button>
+                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
                                 <div class="prot_cart">
                                     <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
                                 </div>
@@ -407,7 +421,7 @@
                                 <div class="coinpast">8.590.000₫</div>                        
                             </div>
                             <div class="prot_btn">
-                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Mua ngay</button>
+                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
                                 <div class="prot_cart">
                                     <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
                                 </div>
@@ -424,7 +438,7 @@
                                 <div class="coinpast">7.690.000₫</div>                        
                             </div>
                             <div class="prot_btn">
-                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Mua ngay</button>
+                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
                                 <div class="prot_cart">
                                     <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
                                 </div>
@@ -441,7 +455,7 @@
                                 <div class="coinpast">29.990.000₫</div>                        
                             </div>
                             <div class="prot_btn">
-                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Mua ngay</button>
+                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
                                 <div class="prot_cart">
                                     <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
                                 </div>
@@ -465,7 +479,7 @@
                                 <div class="coinpast">9.090.000₫</div>                        
                             </div>
                             <div class="prot_btn">
-                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Mua ngay</button>
+                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
                                 <div class="prot_cart">
                                     <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
                                 </div>
@@ -482,7 +496,7 @@
                                 <div class="coinpast">17.990.000₫</div>                        
                             </div>
                             <div class="prot_btn">
-                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Mua ngay</button>
+                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
                                 <div class="prot_cart">
                                     <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
                                 </div>
@@ -499,7 +513,7 @@
                                 <div class="coinpast">11.990.000₫</div>                        
                             </div>
                             <div class="prot_btn">
-                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Mua ngay</button>
+                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
                                 <div class="prot_cart">
                                     <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
                                 </div>
@@ -516,7 +530,7 @@
                                 <div class="coinpast">5.990.000₫</div>                        
                             </div>
                             <div class="prot_btn">
-                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Mua ngay</button>
+                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
                                 <div class="prot_cart">
                                     <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
                                 </div>
@@ -533,7 +547,7 @@
                                 <div class="coinpast">7.990.000₫</div>                        
                             </div>
                             <div class="prot_btn">
-                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Mua ngay</button>
+                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
                                 <div class="prot_cart">
                                     <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
                                 </div>
@@ -557,7 +571,7 @@
                                 <div class="coinpast">7.990.000₫</div>                        
                             </div>
                             <div class="prot_btn">
-                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Mua ngay</button>
+                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
                                 <div class="prot_cart">
                                     <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
                                 </div>
@@ -574,7 +588,7 @@
                                 <div class="coinpast">6.490.000₫</div>                        
                             </div>
                             <div class="prot_btn">
-                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Mua ngay</button>
+                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
                                 <div class="prot_cart">
                                     <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
                                 </div>
@@ -591,7 +605,7 @@
                                 <div class="coinpast">15.000.000₫</div>                        
                             </div>
                             <div class="prot_btn">
-                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Mua ngay</button>
+                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
                                 <div class="prot_cart">
                                     <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
                                 </div>
@@ -615,7 +629,7 @@
                                 <div class="coinpast">24.990.000₫</div>                        
                             </div>
                             <div class="prot_btn">
-                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Mua ngay</button>
+                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
                                 <div class="prot_cart">
                                     <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
                                 </div>
@@ -632,7 +646,7 @@
                                 <div class="coinpast">13.990.000₫</div>                        
                             </div>
                             <div class="prot_btn">
-                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Mua ngay</button>
+                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
                                 <div class="prot_cart">
                                     <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
                                 </div>
@@ -649,7 +663,7 @@
                                 <div class="coinpast">20.990.000₫</div>                        
                             </div>
                             <div class="prot_btn">
-                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Mua ngay</button>
+                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
                                 <div class="prot_cart">
                                     <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
                                 </div>
@@ -665,7 +679,7 @@
                 <div class="footer_infor">
                     <ul class="footer_infor_list">
                         <li class="footer_infor_item">
-                            <a href="#" class="footer_infor_link">Câu hỏi thường gặp khi mua hàng</a>
+                            <a href="#" class="footer_infor_link">Câu hỏi thường gặp khi Đặt hàng</a>
                         </li>
                         <li class="footer_infor_item">
                             <a href="#" class="footer_infor_link">Tra cứu thông tin bảo hành</a>
@@ -697,7 +711,7 @@
                     <div class="footer_call">
                         <ul class="footer_call_list">
                             <li class="footer_call_item">
-                                <h3 class="call_heading">Tư vấn mua hàng (24/7)</h3>
+                                <h3 class="call_heading">Tư vấn Đặt hàng (24/7)</h3>
                                 <p class="call_ct"><b class="call_bct">0988 0909</b> (Miễn phí)</p>
                             </li>
                             <li class="footer_call_item">

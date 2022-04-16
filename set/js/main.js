@@ -212,7 +212,7 @@ function not_buy(){
     var x = document.getElementsByClassName("buy_in");
     var y = document.getElementsByClassName("notibuy");
     for (var i=0; i<x.length; i++){
-        if (x[i].value==""){            
+        if (i!=2 && i!=4 && x[i].value==""){            
             y[0].style.display = "block";
             x[i].focus();
             return false;
@@ -283,4 +283,51 @@ function buying_stock(){
             presen.style.display = "none";
         }
     }
+}
+function clear_stock(){
+    var check = document.getElementsByClassName("checkboxic");
+    for (let i=0; i<check.length; i++){
+        while (check[i].style.display == "block"){
+            document.getElementsByClassName("pcart_item")[i].style.display = "none";
+            document.getElementsByClassName("pcart_item")[i].class = '';
+            cnt -= 1;
+        }
+    }
+    if (cnt==0) {        
+        document.getElementsByClassName("pcart_hollow")[0].style.display = "flex";
+    }
+}
+
+// add_cart
+cnt = 0;
+function add_cart(n){
+    document.getElementsByClassName("pcart_hollow")[0].style.display = "none";
+    document.getElementsByClassName("pcart_prot")[0].style.display = "flex";
+    document.getElementById("cart_icon").style.display = "block";
+    var cart = document.getElementById("cart");
+    cart.innerHTML = cart.innerHTML + "<li class='pcart_item'>\
+                                            <div class='pcart_checkbox'>\
+                                                <div class='checkbox_box' onclick='checkbox("+cnt+")'>\
+                                                    <i class='checkboxic fa-solid fa-check' style='display:none'></i>\
+                                                </div>\
+                                            </div>\
+                                            <img src='' alt='' class='pcart_img' id='cimg'>\
+                                            <div class='pcart_infor'>\
+                                                <h3 class='pcart_name' id='cname'></h3>\
+                                                <div class='pcart_coin'>\
+                                                    <div class='ccoinpre' id='cpre' style='font-size: 16px;'></div>\
+                                                    <div class='ccoinpast' id='cpast' style='font-size: 16px;'></div>\
+                                                    <!-- <div class='pcart_ram' style='font-size: 16px;'>6G/128G</div>--> \
+                                                </div>\
+                                            </div>\
+                                        </li>   ";
+    document.getElementById("cimg").src = document.getElementsByClassName("prot_img")[n].src;
+    document.getElementById("cname").innerHTML = document.getElementsByClassName("prot_heading")[n].innerHTML;
+    document.getElementById("cpre").innerHTML = document.getElementsByClassName("coinpre")[n].innerHTML;                               
+    document.getElementById("cpast").innerHTML = document.getElementsByClassName("coinpast")[n].innerHTML;
+    document.getElementById("cimg").id = '';
+    document.getElementById("cname").id = '';
+    document.getElementById("cpre").id = '';
+    document.getElementById("cpast").id = '';
+    cnt += 1;
 }

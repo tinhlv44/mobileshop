@@ -37,7 +37,7 @@
     cursor: pointer;
     color: #1b1212;
 }
-.cart_icon{
+#cart_icon{
 	text-align: center;
 	font-weight: 500;
 	font-size: 12px;
@@ -50,6 +50,7 @@
 	top: 4px;
     left: 4px;
     padding: 6px 3px 0px 3px;
+	display: none;
 }
 
 .item-strong{
@@ -226,10 +227,13 @@
 .list_cart{
 	border: 1px solid var(--w--color);
 	padding: 4px;
-	border-radius: 5px; 
+	border-radius: 5px; 	
 }
 .list_cart:hover{
 	background-color: var(--w--color);
+}
+.list_cart:hover .pcart{
+	display: flex;
 }
 .list_cart:hover .infor_list-link{	
 	color: black;
@@ -400,7 +404,7 @@
 /* relo */
 .relo_body{
 	width: 500px;
-	border: 2px solid var(--main--color);
+	border: 2px solid black;
 	border-radius: 20px;
     background-color: rgb(255, 255, 255);
 	overflow: hidden;
@@ -422,7 +426,7 @@
 }
 .relo_relo{
 	font-size: 16px;	
-	color: var(--main--color);
+	color: var(--relo--color);
 	cursor: pointer;
 }
 .relo_input{
@@ -433,7 +437,7 @@
 	font-size: 22px;
 	border: 1px solid var(--border--color);
 	border-radius: 6px;
-	outline-color: var(--main--color);
+	outline-color: var(--relo--color);
 }
 .relo_form{
 	margin-top: 16px;
@@ -447,7 +451,7 @@
 	text-align: center;
 }
 .dieukhoang{	
-	color: var(--main--color);
+	color: var(--relo--color);
 }
 .dieukhoang:hover{
 	color: #4d4b4b;
@@ -461,8 +465,12 @@
 .relo_btnr{
 	padding: 0 32px;
 }
+.relo_btnr{
+	background-color: var(--relo--color);
+}
+
 .relo_btnl:hover{
-	color: var(--main--color);
+	color: var(--relo--color);
 }
 .relo_social{
 	background-color: var(--border--color);
@@ -500,7 +508,7 @@
 	justify-content: flex-end;
 }
 .relo_linkhelp{	
-	color: var(--main--color);
+	color: var(--relo--color);
 	padding: 0 16px;	
 }
 .relo_linkhelp.help{
@@ -511,7 +519,7 @@
 	color: #302e2e;
 }
 .relo_linkhelp.help:hover{
-	color: var(--main--color);
+	color: var(--relo--color);
 }
 .relo_err{
 	display: none;
@@ -963,11 +971,41 @@
 }
 /* pcart hollow*/
 .pcart{
-	min-height: 254px;
-	display: flex;
+	display: none;
 	flex-wrap: wrap;
-	width: 80%;
+	width: 600px;
 	justify-content: center;
+	position: absolute;
+	background-color: var(--w--color);
+	top: 120%;
+	right: 0;
+	z-index: 1;
+	color: #000000;
+	padding: 16px 24px;
+	box-shadow: 0 6px 12px var(--shadow--color);	
+	transform-origin: calc(100% - 40px) top;
+	animation: animanotify ease-in 0.25s;
+}
+.pcart::before{
+	position: absolute;
+	content: "";
+	border-width: 28px 16px;
+	border-style: solid;
+	border-color: transparent transparent var(--w--color) transparent;
+	top: -42px;
+	right: 14px;
+}
+.pcart::after{
+	content: "";
+	position: absolute;
+	display: block;
+	right: 0;
+	top: -3%;
+	height: 20px;
+	width: 126px;
+}
+.pcart:hover{
+	display: flex;
 }
 .icon_sad{
 	font-size: 50px;
@@ -983,9 +1021,6 @@
 	font-size: 26px;	
 	margin: 16px 0;	
 }
-.pcart_rehome{
-	padding: 0 16px;
-}
 /* pcart full */
 .pcart_prot{
 	width: 100%;
@@ -994,8 +1029,7 @@
     align-items: center;
 }
 .pcart_list{	
-	margin: 0;
-	padding: 0;
+	width: 100%;
 }
 .pcart_item{
 	border: 1px solid black;
@@ -1032,7 +1066,7 @@
 .pcart_infor{
 	height: 100%;
     display: flex;
-    width: 30%;
+    width: 54%;
     justify-content: center;
 	flex-direction: column;
 }
@@ -1043,20 +1077,23 @@
 .pcart_coin{
 	display: flex;
 	justify-content: space-between;
-	padding: 0 32px;
+	padding: 0 20px;
 	margin-top: 20px;
 	font-size: 24px;
-}
-.pcart_describe{
-	width: 40%;
+
 }
 .pcart_btn{
-	width: 32%;
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
 }
 .pcart_button{
 	color: var(--w--color);
+	width: 32%;
 }
-
+.pcart_clear{
+	color: #000000;
+}
 /* proi */
 .proinfor{
 	width: 80%;
@@ -1220,4 +1257,20 @@
 	position: absolute;
 	top: -4px;
 	right: 8px;
+}
+.coinpre{
+	color: red;
+	font-weight: 500;
+}
+.coinpast{
+	text-decoration: line-through;
+	font-size: 14px;
+}
+.ccoinpre{
+	color: red;
+	font-weight: 500;
+}
+.ccoinpast{
+	text-decoration: line-through;
+	font-size: 14px;
 }
