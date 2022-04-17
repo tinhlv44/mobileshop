@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MOBILE Shop</title>    
+    <title>Điện thoại - MOBILE Shop</title>    
     <script src="./set/js/main.js"></script>   
     <link rel="stylesheet" href="./set/css/base.css">
     <link rel="stylesheet" href="./set/css/main.css">
@@ -141,13 +141,13 @@
                             <div class="name">
                                 <h3>HÃNG SẢN XUẤT</h3>
                                 <ul class="sub_menu1">
-                                    <li><a>Apple (iPhone)</a></li>
-                                    <li><a>Samsung</a></li>
-                                    <li><a>OPPO</a></li>
-                                    <li><a>Xiaomi</a></li>
-                                    <li><a>Realme</a></li>
-                                    <li><a>Vivo</a></li>
-                                    <li><a>Nokia</a></li>
+                                    <li><a onclick="presen_type('iphone')">Apple (iPhone)</a></li>
+                                    <li><a onclick="presen_type('samsung')">Samsung</a></li>
+                                    <li><a onclick="presen_type('oppo')">OPPO</a></li>
+                                    <li><a onclick="presen_type('xiaomi')">Xiaomi</a></li>
+                                    <li><a onclick="presen_type('realme')">Realme</a></li>
+                                    <li><a onclick="out_of_stock()">Vivo</a></li>
+                                    <li><a onclick="out_of_stock()">Nokia</a></li>
                                 </ul>
                             </div>
                             <div class="coin">
@@ -264,83 +264,10 @@
             </nav>
         </header>
         <div class="container">
-            <div class="product_type">                    
-                <div class="slideshow">
-                    <div class="myslide">
-                        <a href="product_realme-gt-neo2-5g.html" class="slide_aimg">
-                            <img src="./set/img/slideshow/gtneo2.jpg" class="slide_img">
-                        </a>
-                    </div>                
-                    <div class="myslide">
-                        <a href="product_iphone-11.html" class="slide_aimg">
-                            <img src="./set/img/slideshow/iphone_11_chinh_hang.jpg" class="slide_img">
-                        </a>
-                    </div>
-                    
-                    <div class="myslide">
-                        <a href="product_iphone-12.html" class="slide_aimg">
-                            <img src="./set/img/slideshow/iphone_12_chinh_hang.jpg" class="slide_img">
-                        </a>
-                    </div>
-                        
-                    <div class="myslide">
-                        <a href="product_xiaomi-redmi-k30-5g.html" class="slide_aimg">
-                            <img src="./set/img/slideshow/redmi_k30_5g.jpg" class="slide_img">
-                        </a>
-                    </div>
-                    
-                    <div class="myslide">
-                        <a href="product_samsung-galaxy-z-flip3-5g.html" class="slide_aimg">
-                            <img src="./set/img/slideshow/galaxy_zlip3.jpg" class="slide_img">
-                        </a>
-                    </div>
-                        
-                    <div class="myslide">
-                        <a href="product_iphone-13-pro-max.html" class="slide_aimg">
-                            <img src="./set/img/slideshow/iphone_13_pro_max.jpg" class="slide_img">
-                        </a>
-                    </div>   
-                    <div class="slide_prev" onclick="plusSlides(-1)">❮</div>
-                    <div class="slide_next" onclick="plusSlides(1)">❯</div>
-    
-                    <div class="slide_list">
-                        <div class="slide_link demo" onclick="currentSlide(1)">
-                            <p class="slide_linkct">Realme GT Neo 2 5G</p>
-                        </div>
-                        <div class="slide_link demo" onclick="currentSlide(2)">
-                            <p class="slide_linkct">iPhone 11 chính hãng</p>
-                        </div>
-                        <div class="slide_link demo" onclick="currentSlide(3)">
-                            <p class="slide_linkct">iPhone 12 chính hãng</p>
-                        </div>
-                        <div class="slide_link demo" onclick="currentSlide(4)">
-                            <p class="slide_linkct">Redmi K30 5G giá rẻ</p>
-                        </div>
-                        <div class="slide_link demo" onclick="currentSlide(5)">
-                            <p class="slide_linkct">Samsung Galaxy Z Flip 3</p>
-                        </div>    
-                        <div class="slide_link demo" onclick="currentSlide(6)">
-                            <p class="slide_linkct">iPhone 13 Pro Max</p>
-                        </div>
-                    </div>
-                    <div class="slide_id">
-                        <div class="slide_idd"></div>
-                        <div class="slide_idd"></div>
-                        <div class="slide_idd"></div>
-                        <div class="slide_idd"></div>
-                        <div class="slide_idd"></div>
-                        <div class="slide_idd"></div>
-                    </div>
-                    <script>
-                        let slideIndex = 1;   
-                        showSlides(slideIndex);
-                    </script>  
-                </div>
-            </div>
             <div class="product">
-                <div class="product_type">                    
+                <div class="product_type" id="type_iphone">                    
                     <div class="product_heading">
-                        <h3 class="product_headingct">Sản bán chạy</h3>                    
+                        <h3 class="product_headingct">iPhone</h3>                    
                     </div>
                     <div class="prot">                                 
                         <div class="prot_frame">
@@ -361,6 +288,23 @@
                             <div class="prot_sale">Giảm 20%</div>
                         </div>
                         <div class="prot_frame">
+                            <a href="product_iphone-12.html" class="prot_aimg">                            
+                                <img class="prot_img" src="./set/img/product/iphone/iphone_12/den.jpg" alt="">
+                            </a>
+                            <h3 class="prot_heading">iPhone 12</h3>
+                            <div class="prot_coin">
+                                <div class="coinpre">15.490.000₫</div>
+                                <div class="coinpast">17.990.000₫</div>                        
+                            </div>
+                            <div class="prot_btn">
+                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
+                                <div class="prot_cart" onclick="add_cart(1)">
+                                    <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
+                                </div>
+                            </div>
+                            <div class="prot_sale">Giảm 13.88%</div>
+                        </div>
+                        <div class="prot_frame">
                             <a href="product_iphone-11.html" class="prot_aimg">                            
                                 <img class="prot_img" src="./set/img/product/iphone/iphone_11/den.jpg" alt="">
                             </a>
@@ -371,12 +315,87 @@
                             </div>
                             <div class="prot_btn">
                                 <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
-                                <div class="prot_cart" onclick="add_cart(1)">
+                                <div class="prot_cart" onclick="add_cart(2)">
                                     <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
                                 </div>
                             </div>
                             <div class="prot_sale">Giảm 500K</div>
                         </div>
+                        <div class="prot_frame">
+                            <a class="prot_aimg">                            
+                                <img class="prot_img" src="./set/img/product/iphone/iphone_xs/den.jpg" alt="">
+                            </a>
+                            <h3 class="prot_heading">iPhone Xs</h3>
+                            <div class="prot_coin">
+                                <div class="coinpre">7.990.000₫</div>
+                                <div class="coinpast">9.990.000₫</div>                        
+                            </div>
+                            <div class="prot_btn">
+                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
+                                <div class="prot_cart" onclick="add_cart(3)">
+                                    <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
+                                </div>
+                            </div>
+                            <div class="prot_sale">Giảm 20%</div>
+                        </div>
+                        <div class="prot_frame">
+                            <a class="prot_aimg">                            
+                                <img class="prot_img" src="./set/img/product/iphone/iphone_x/den.jpg" alt="">
+                            </a>
+                            <h3 class="prot_heading">iPhone X</h3>
+                            <div class="prot_coin">
+                                <div class="coinpre">7.690.000₫</div>
+                                <div class="coinpast">8.590.000₫</div>                        
+                            </div>
+                            <div class="prot_btn">
+                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
+                                <div class="prot_cart" onclick="add_cart(4)">
+                                    <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
+                                </div>
+                            </div>
+                            <div class="prot_sale">Giảm 900K</div>
+                        </div>
+                        <div class="prot_frame">
+                            <a class="prot_aimg">                            
+                                <img class="prot_img" src="./set/img/product/iphone/iphone_8_plus/den.jpg" alt="">
+                            </a>
+                            <h3 class="prot_heading">iPhone 8 Plus</h3>
+                            <div class="prot_coin">
+                                <div class="coinpre">6.690.000₫</div>
+                                <div class="coinpast">7.690.000₫</div>                        
+                            </div>
+                            <div class="prot_btn">
+                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
+                                <div class="prot_cart" onclick="add_cart(5)">
+                                    <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
+                                </div>
+                            </div>
+                            <div class="prot_sale">Giảm 1000K</div>
+                        </div>
+                        <div class="prot_frame">
+                            <a class="prot_aimg">                            
+                                <img class="prot_img" src="./set/img/product/iphone/iphone_12/pro_den.jpg" alt="">
+                            </a>
+                            <h3 class="prot_heading">iPhone 12 Pro</h3>
+                            <div class="prot_coin">
+                                <div class="coinpre">20.990.000₫</div>
+                                <div class="coinpast">29.990.000₫</div>                        
+                            </div>
+                            <div class="prot_btn">
+                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
+                                <div class="prot_cart" onclick="add_cart(6)">
+                                    <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
+                                </div>
+                            </div>
+                            <div class="prot_sale">Giảm 30%</div>
+                        </div>
+                    </div>  
+                </div>
+                <div class="product_type" id="type_xiaomi">                    
+                    <div class="product_heading">
+                        <h3 class="product_headingct">Xiaomi</h3>                    
+                    </div>
+                    <div class="prot">                    
                         <div class="prot_frame">
                             <a href="product_xiaomi-redmi-k40-gaming.html" class="prot_aimg">                            
                                 <img class="prot_img" src="./set/img/product/xiaomi/xiaomi_redmi_k40_gaming/den.jpg" alt="">
@@ -388,7 +407,7 @@
                             </div>
                             <div class="prot_btn">
                                 <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
-                                <div class="prot_cart" onclick="add_cart(2)">
+                                <div class="prot_cart" onclick="add_cart(7)">
                                     <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
                                 </div>
                             </div>
@@ -405,12 +424,128 @@
                             </div>
                             <div class="prot_btn">
                                 <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
-                                <div class="prot_cart" onclick="add_cart(3)">
+                                <div class="prot_cart" onclick="add_cart(8)">
                                     <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
                                 </div>
                             </div>
                             <div class="prot_sale">Giảm 11.11%</div>
                         </div>
+                        <div class="prot_frame">
+                            <a href="product_xiaomi-black-shark-5.html" class="prot_aimg">                            
+                                <img class="prot_img" src="./set/img/product/xiaomi/xiaomi_black-shark-5/den.jpg" alt="">
+                            </a>
+                            <h3 class="prot_heading">Xiaomi Black Shark 5</h3>
+                            <div class="prot_coin">
+                                <div class="coinpre">9.990.000₫</div>
+                                <div class="coinpast">11.990.000₫</div>                        
+                            </div>
+                            <div class="prot_btn">
+                                <button class="prot_pay btn btn_green" onclick="end_stock()">Đặt hàng ngay</button>
+                                <div class="prot_cart" onclick="end_stock()">
+                                    <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
+                                </div>
+                            </div>
+                            <div class="prot_sale">Giảm 16.66%</div>
+                        </div>
+                        <div class="prot_frame">
+                            <a href="product_xiaomi-redmi-k30-5g.html" class="prot_aimg">                            
+                                <img class="prot_img" src="./set/img/product/xiaomi/xiaomi_redmi_k30_5g/tim.jpg" alt="">
+                            </a>
+                            <h3 class="prot_heading">Xiaomi Redmi K30 5G</h3>
+                            <div class="prot_coin">
+                                <div class="coinpre">4.790.000₫</div>
+                                <div class="coinpast">5.990.000₫</div>                        
+                            </div>
+                            <div class="prot_btn">
+                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
+                                <div class="prot_cart" onclick="add_cart(10)">
+                                    <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
+                                </div>
+                            </div>
+                            <div class="prot_sale">Giảm 20%</div>
+                        </div>
+                        <div class="prot_frame">
+                            <a class="prot_aimg">                            
+                                <img class="prot_img" src="./set/img/product/xiaomi/xiaomi_poco_x4_pro_5g/den.jpg" alt="">
+                            </a>
+                            <h3 class="prot_heading">Xiaomi Poco X4 Pro 5G</h3>
+                            <div class="prot_coin">
+                                <div class="coinpre">6.390.000₫</div>
+                                <div class="coinpast">7.990.000₫</div>                        
+                            </div>
+                            <div class="prot_btn">
+                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
+                                <div class="prot_cart" onclick="add_cart(11)">
+                                    <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
+                                </div>
+                            </div>
+                            <div class="prot_sale">Giảm 20%</div>
+                        </div>
+                    </div>  
+                </div>
+                <div class="product_type" id="type_oppo">                    
+                    <div class="product_heading">
+                        <h3 class="product_headingct">Oppo</h3>                    
+                    </div>
+                    <div class="prot">                    
+                        <div class="prot_frame">
+                            <a class="prot_aimg">                            
+                                <img class="prot_img" src="./set/img/product/oppo/oppo_reno_10x_zoom/xanh.jpg" alt="">
+                            </a>
+                            <h3 class="prot_heading">Oppo Reno 10X Zoom</h3>
+                            <div class="prot_coin">
+                                <div class="coinpre">5.990.000₫</div>
+                                <div class="coinpast">7.990.000₫</div>                        
+                            </div>
+                            <div class="prot_btn">
+                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
+                                <div class="prot_cart" onclick="add_cart(12)">
+                                    <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
+                                </div>
+                            </div>
+                            <div class="prot_sale">Giảm 2000k</div>
+                        </div>
+                        <div class="prot_frame">
+                            <a class="prot_aimg">                            
+                                <img class="prot_img" src="./set/img/product/oppo/oppo_a93/den.jpg" alt="">
+                            </a>
+                            <h3 class="prot_heading">Oppo A93</h3>
+                            <div class="prot_coin">
+                                <div class="coinpre">4.490.000₫</div>
+                                <div class="coinpast">6.490.000₫</div>                        
+                            </div>
+                            <div class="prot_btn">
+                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
+                                <div class="prot_cart" onclick="add_cart(13)">
+                                    <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
+                                </div>
+                            </div>
+                            <div class="prot_sale">Giảm 2000k</div>
+                        </div>
+                        <div class="prot_frame">
+                            <a class="prot_aimg">                            
+                                <img class="prot_img" src="./set/img/product/oppo/oppo_find_x2/lam.jpg" alt="">
+                            </a>
+                            <h3 class="prot_heading">Oppo Find X2</h3>
+                            <div class="prot_coin">
+                                <div class="coinpre">9.990.000₫</div>
+                                <div class="coinpast">15.000.000₫</div>                        
+                            </div>
+                            <div class="prot_btn">
+                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
+                                <div class="prot_cart" onclick="add_cart(14)">
+                                    <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
+                                </div>
+                            </div>
+                            <div class="prot_sale">Giảm 33.33%</div>
+                        </div>
+                    </div>  
+                </div>
+                <div class="product_type" id="type_samsung">                    
+                    <div class="product_heading">
+                        <h3 class="product_headingct">Samsung</h3>                    
+                    </div>
+                    <div class="prot">                    
                         <div class="prot_frame">
                             <a href="product_samsung-galaxy-z-flip3-5g.html" class="prot_aimg">                            
                                 <img class="prot_img" src="./set/img/product/samsung/samsung_galaxy_z_flip3_5g/tim.jpg" alt="">
@@ -422,12 +557,53 @@
                             </div>
                             <div class="prot_btn">
                                 <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
-                                <div class="prot_cart" onclick="add_cart(4)">
+                                <div class="prot_cart" onclick="add_cart(15)">
                                     <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
                                 </div>
                             </div>
                             <div class="prot_sale">Giảm 30%</div>
                         </div>
+                        <div class="prot_frame">
+                            <a class="prot_aimg">                            
+                                <img class="prot_img" src="./set/img/product/samsung/samsung_galaxy_s21_plus_5g/tim.jpg" alt="">
+                            </a>
+                            <h3 class="prot_heading">Samsung Galaxy S21 Plus 5G</h3>
+                            <div class="prot_coin">
+                                <div class="coinpre">12.490.000₫</div>
+                                <div class="coinpast">13.990.000₫</div>                        
+                            </div>
+                            <div class="prot_btn">
+                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
+                                <div class="prot_cart" onclick="add_cart(16)">
+                                    <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
+                                </div>
+                            </div>
+                            <div class="prot_sale">Giảm 1500k</div>
+                        </div>
+                        <div class="prot_frame">
+                            <a class="prot_aimg">                            
+                                <img class="prot_img" src="./set/img/product/samsung/galaxy_note_20_ultra_5g/den.jpg" alt="">
+                            </a>
+                            <h3 class="prot_heading">Galaxy Note 20 Ultra 5G</h3>
+                            <div class="prot_coin">
+                                <div class="coinpre">18.890.000₫</div>
+                                <div class="coinpast">20.990.000₫</div>                        
+                            </div>
+                            <div class="prot_btn">
+                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
+                                <div class="prot_cart" onclick="add_cart(17)">
+                                    <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
+                                </div>
+                            </div>
+                            <div class="prot_sale">Giảm 10%</div>
+                        </div>
+                    </div>  
+                </div>
+                <div class="product_type" id="type_realme">                    
+                    <div class="product_heading">
+                        <h3 class="product_headingct">Realme</h3>                    
+                    </div>
+                    <div class="prot">                    
                         <div class="prot_frame">
                             <a href="product_realme-gt-neo2-5g.html" class="prot_aimg">                            
                                 <img class="prot_img" src="./set/img/product/oppo/realme_gt_neo2_5g/xanh_la.jpg" alt="">
@@ -447,74 +623,40 @@
                         </div>
                         <div class="prot_frame">
                             <a class="prot_aimg">                            
-                                <img class="prot_img" src="./set/img/product/macbook/macbook_air_2020.jpg" alt="">
+                                <img class="prot_img" src="./set/img/product/oppo/realme_gt_neo3/xanh.jpg" alt="">
                             </a>
-                            <h3 class="prot_heading">MacBoo Air 13" 2020</h3>
+                            <h3 class="prot_heading">Realme GT Neo 3</h3>
                             <div class="prot_coin">
-                                <div class="coinpre">24.990.000₫</div>
-                                <div class="coinpast">29.990.000₫</div>                        
+                                <div class="coinpre">7.390.000₫</div>
+                                <div class="coinpast">7.990.000₫</div>                        
                             </div>
                             <div class="prot_btn">
                                 <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
-                                <div class="prot_cart" onclick="add_cart(6)">
+                                <div class="prot_cart" onclick="add_cart(19)">
                                     <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
                                 </div>
                             </div>
-                            <div class="prot_sale">Giảm 20%</div>
+                            <div class="prot_sale">Giảm 600k</div>
                         </div>
                         <div class="prot_frame">
                             <a class="prot_aimg">                            
-                                <img class="prot_img" src="./set/img/product/asus/asus_tuf_gaming.jpg" alt="">
+                                <img class="prot_img" src="./set/img/product/oppo/realme_gt_neo_flash_5g/hong.jpg" alt="">
                             </a>
-                            <h3 class="prot_heading">Laptop Asus TUF Gaming </h3>
+                            <h3 class="prot_heading">Realme GT Neo Flash 5G</h3>
                             <div class="prot_coin">
-                                <div class="coinpre">17.990.000₫</div>
-                                <div class="coinpast">20.990.000₫</div>                        
+                                <div class="coinpre">7.490.000₫</div>
+                                <div class="coinpast">7.990.000₫</div>                        
                             </div>
                             <div class="prot_btn">
                                 <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
-                                <div class="prot_cart" onclick="add_cart(7)">
+                                <div class="prot_cart" onclick="add_cart(20)">
                                     <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
                                 </div>
                             </div>
-                            <div class="prot_sale">Giảm 3000k</div>
+                            <div class="prot_sale">Giảm 500k</div>
                         </div>
-                        <div class="prot_frame" id="type_listen">
-                            <a class="prot_aimg">                            
-                                <img class="prot_img" src="./set/img/product/phukien/AirPods.jpg" alt="">
-                            </a>
-                            <h3 class="prot_heading">Tai nghe AirPods 2 hộp sạc dây</h3>
-                            <div class="prot_coin">
-                                <div class="coinpre">650.000₫</div>    
-                                <div class="coinpast">750.000₫</div>                       
-                            </div>
-                            <div class="prot_btn">
-                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
-                                <div class="prot_cart" onclick="add_cart(8)">
-                                    <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
-                                </div>
-                            </div>
-                            <div class="prot_sale">Giảm 100k</div>
-                        </div>
-                        <div class="prot_frame" id="type_skin">
-                            <a class="prot_aimg">                            
-                                <img class="prot_img" src="./set/img/product/phukien/pin_li_polymer.jpg" alt="">
-                            </a>
-                            <h3 class="prot_heading">Sạc dự phòng</h3>
-                            <div class="prot_coin">
-                                <div class="coinpre">290.000₫</div>
-                                <div class="coinpast">590.000₫</div>                        
-                            </div>
-                            <div class="prot_btn">
-                                <button class="prot_pay btn btn_green" onclick="buying_stock()">Đặt hàng ngay</button>
-                                <div class="prot_cart" onclick="add_cart(9)">
-                                    <i class="icon_cart_pro fa-solid fa-cart-shopping"></i>
-                                </div>
-                            </div>
-                            <div class="prot_sale">Giảm 300k</div>
-                        </div>
-                    </div>  
-                </div>
+                    </div>
+                </div>                
             </div>
         </div>
         <footer class="footer">
