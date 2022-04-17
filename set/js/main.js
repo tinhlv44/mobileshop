@@ -227,6 +227,10 @@ function not_promotion(){
 function go_home(){
     presen_modal("Vui lòng quay về trang chủ!");
 }
+function end_stock(){
+    presen_modal("Đã hết hàng.");
+}
+
 // hide product
 function hide_mb(){
     var mbstyle = document.getElementsByClassName("product_type");
@@ -324,6 +328,38 @@ function add_cart(n){
     document.getElementById("cname").innerHTML = document.getElementsByClassName("prot_heading")[n].innerHTML;
     document.getElementById("cpre").innerHTML = document.getElementsByClassName("coinpre")[n].innerHTML;                               
     document.getElementById("cpast").innerHTML = document.getElementsByClassName("coinpast")[n].innerHTML;
+    document.getElementById("cimg").id = '';
+    document.getElementById("cname").id = '';
+    document.getElementById("cpre").id = '';
+    document.getElementById("cpast").id = '';
+    cnt += 1;
+}
+function add_cart2(){
+    document.getElementsByClassName("pcart_hollow")[0].style.display = "none";
+    document.getElementsByClassName("pcart_prot")[0].style.display = "flex";
+    document.getElementById("cart_icon").style.display = "block";
+    var cart = document.getElementById("cart");
+    cart.innerHTML = cart.innerHTML + "<li class='pcart_item'>\
+                                            <div class='pcart_checkbox'>\
+                                                <label for='c"+cnt+"' class='checkbox_box'>\
+                                                    <input type='checkbox' class='not_check' id='c"+cnt+"'>\
+                                                    <i class='checkboxic fa-solid fa-check' ></i>\
+                                                </label>\
+                                            </div>\
+                                            <img src='' alt='' class='pcart_img' id='cimg'>\
+                                            <div class='pcart_infor'>\
+                                                <h3 class='pcart_name' id='cname'></h3>\
+                                                <div class='pcart_coin'>\
+                                                    <div class='ccoinpre' id='cpre' style='font-size: 16px;'></div>\
+                                                    <div class='ccoinpast' id='cpast' style='font-size: 16px;'></div>\
+                                                    <!-- <div class='pcart_ram' style='font-size: 16px;'>6G/128G</div>--> \
+                                                </div>\
+                                            </div>\
+                                        </li>   ";
+    document.getElementById("cimg").src = document.getElementsByClassName("proinfor_cimg")[0].src;
+    document.getElementById("cname").innerHTML = document.getElementsByClassName("proinfor_heading")[0].innerHTML;
+    document.getElementById("cpre").innerHTML = document.getElementsByClassName("coinpre")[0].innerHTML;                               
+    document.getElementById("cpast").innerHTML = document.getElementsByClassName("coinpast")[0].innerHTML;
     document.getElementById("cimg").id = '';
     document.getElementById("cname").id = '';
     document.getElementById("cpre").id = '';

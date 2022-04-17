@@ -938,6 +938,10 @@
 	width: 32px;
 	height: 32px;
 }
+.prot_cart:hover{
+	color: var(--main--color);
+}
+
 .icon_cart_pro{
 	position: absolute;
 	top: 50%;
