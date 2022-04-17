@@ -1295,34 +1295,3 @@
 	text-decoration: line-through;
 	font-size: 14px;
 }
-
-
-/* 
-
-.checkbox:checked ~ .checkbo{
-	display: block;
-}
-.hehe{
-	position: relative;
-	cursor: pointer;
-}
-.hehee{
-	display: none;
-}
-.hehe::before{
-	
-	content: "";
-	width: 20px;
-	height: 20px;
-	border: 1px solid green;
-	display: block;
-}
-.fa-solid{
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: none;
-}
-.hehee:checked ~ i{
-	display: block;
-} */
