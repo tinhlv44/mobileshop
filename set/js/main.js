@@ -291,12 +291,13 @@ function clear_stock(){
     for (i=0; i<check.length; i++){
         while (check[i].checked === true){
             pcart.removeChild(document.getElementsByClassName("pcart_item")[i]);
+            if (check[i] == undefined)  {        
+                document.getElementsByClassName("pcart_hollow")[0].style.display = "flex";
+                document.getElementsByClassName("pcart_prot")[0].style.display = "none";
+                document.getElementById("cart_icon").style.display = "none";
+                return true;
+            }
         }
-    }
-    if (i==0) {        
-        document.getElementsByClassName("pcart_hollow")[0].style.display = "flex";
-        document.getElementsByClassName("pcart_prot")[0].style.display = "none";
-        document.getElementById("cart_icon").style.display = "none";
     }
 }
 
